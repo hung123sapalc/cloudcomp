@@ -15,7 +15,7 @@ const passport = require('passport')
 const { ensureAuthenticated } = require('./config/auth')
 //Passport config:
 require('./config/passport')(passport);
-
+require('./startup/prod')(app);
 // connect to mongodb & listen for requests
 const dbURI = "mongodb+srv://hungsapa123lc:sapa123lc@nodetuts.6dhzj.mongodb.net/node-tuts?retryWrites=true&w=majority";
 const port = process.env.PORT || 3000;
